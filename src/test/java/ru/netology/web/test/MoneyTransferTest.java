@@ -4,6 +4,7 @@ import lombok.val;
 import org.junit.jupiter.api.Test;
 import ru.netology.web.data.DataHelper;
 import ru.netology.web.page.LoginPage;
+import ru.netology.web.page.TransferPage;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -80,9 +81,7 @@ public class MoneyTransferTest {
         val changeFirstCard = dashboardPage.firstCard();
         changeFirstCard.dataFilling(DataHelper.getSecondCardInfo(), amount);
         val firstCardBalanceAfterTransfer = dashboardPage.getCurrentFirstCardBalance();
-        val secondCardBalanceAfterTransfer = dashboardPage.getCurrentSecondCardBalance();
-        assertEquals(firstCardBalanceAfterTransfer, initialFirstCardBalance + amount);
-        assertEquals(secondCardBalanceAfterTransfer, initialSecondCardBalance - amount);
+        TransferPage.errorTransferOverLimit();
 
     }
 
