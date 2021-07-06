@@ -1,0 +1,1 @@
+###### **Build Status:** [![Build status](https://ci.appveyor.com/api/projects/status/iwm9yyr6v6r8s2wj?svg=true)](https://ci.appveyor.com/project/axelbros/pageobject)
